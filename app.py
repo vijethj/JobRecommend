@@ -37,8 +37,8 @@ collection = db['pdf_collection']
 
 app.config['MAIL_SERVER']='smtp.rediffmail.com'
 app.config['MAIL_PORT'] = 587
-app.config['MAIL_USERNAME'] = 'jyothsnajain@rediffmail.com'
-app.config['MAIL_PASSWORD'] = 'neethi1728'
+app.config['MAIL_USERNAME'] = 'email'
+app.config['MAIL_PASSWORD'] = 'password'
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
 mail = Mail(app)
