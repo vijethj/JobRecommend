@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+	margin:0;
+	padding:0;
+	font-family: 'Poppins', sans-serif;
+}
+body
+{
+	background: #0a2a43;
+	min-height: 1500px;
+}
+section.sectionA
+{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+section.sectionA:before
+{
+	content:'';
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	background: linear-gradient(to top, #e1e6eb, transparent);
+	z-index: 10000;
+
+}
+section.sectionA:after
+{
+	content:'';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	z-index: 10000;
+	mix-blend-mode: color;
+	
+}
+section.sectionA img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	pointer-events: none;
+}
+#text
+{
+	position: relative;
+	color: #f4f3f3;
+	font-size: 10em;
+	z-index: 1;
+}
+#road
+{
+	z-index: 2;
+}
+section.sectionB
+{
+	position: relative;
+	width: 100%;
+	height: 110vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+section.sectionB:before
+{
+	content:'';
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	background: linear-gradient(to top, #e1e6eb, transparent);
+	z-index: 10000;
+
+}
+section.sectionB:after
+{
+	content:'';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	z-index: 10000;
+	mix-blend-mode: color;
+}
+section.sectionB img.serious
+{
+	position:absolute;
+	top: 0;
+	left: 0;
+	width: 170%;
+	height: 170%;
+	object-fit: cover;
+	pointer-events: none;
+	transform: scalex(-1);
+	background: linear-gradient(to top, #e1e6eb, transparent);
+
+}
+section.sectionB img.business
+{
+	position:absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	pointer-events: none;
+	background: linear-gradient(to top, #e1e6eb, transparent);
+
+}
+#text2
+{
+	position: relative;
+	color: #1b455e;
+	font-size: 10em;
+	z-index: 1;
+}
+#serious
+{
+	z-index: 3;
+}
+#business
+{
+	z-index: 2;
+}
+
+section.sectionC {
+	position:absolute;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff; /* set a background color for the section */
+  }
+  section.sectionC:before
+{
+	content:'';
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	z-index: 10000;
+
+}
+section.sectionC:after
+{
+	content:'';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	z-index: 10000;
+	mix-blend-mode:color;
+}
+
+  .sectionC {
+	background-image: url('/static/images/ambitious-business-man-climbing-stairs-success_31965-3080.jpg'); /* set the background image for the form container */
+	background-position:center ; /* center the image horizontally and vertically */
+	background-repeat: no-repeat; /* do not repeat the image */
+	background-size: 100%; /* resize the image to cover the container */
+	width: 100%; /* adjust the width of the container as needed */
+	box-sizing: border-box; /* include padding in the element's total width and height */
+  }
+  
+  

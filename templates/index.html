@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PDF Manager</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel = "stylesheet" type = "text/css" href = "/static/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style>
+		body {
+			background-color: #efecec; /* Set the background color */
+			background-repeat: no-repeat; 
+			background-size:auto; /* Resize the background image to cover the entire container */
+			background-position: center;
+			background-position-y: -150%;
+		}
+	</style>
+</head>
+<body>
+	<section class='sectionA'>
+		<img src="/static/images/bg.jpg" id="bg">
+		<img src="/static/images/moon.png" id="moon">
+		<img src="/static/images/mountain.png" id="mountain">
+		<img src="/static/images/road.png" id="road">
+		<h1 style="font-size: 600%; padding-right: 30%; padding-bottom: 40vh;" id="text" >
+			Looking for a Job?<br>
+			Well look no further
+		</h1>
+
+	</section>
+	<script type="text/javascript">
+		let bg= document.getElementById("bg");
+		let moon= document.getElementById("moon");
+		let mountain= document.getElementById("mountain");
+		let road= document.getElementById("road");
+		let text= document.getElementById("text");
+
+		window.addEventListener('scroll', function(){
+			var value = window.scrollY;
+			bg.style.top = value*0.5 + 'px';
+			moon.style.left = -value*0.5 + 'px';
+			mountain.style.top = -value*0.15 + 'px';
+			road.style.top = value*0.15 + 'px';
+			text.style.top = value*1 + 'px';
+
+		})
+	</script>
+	<section class = 'sectionB'>
+		<img class="serious" src="/static/images/serious-worker-grey-suit-using-binoculars_edit.jpg" id="serious">
+		<img class="business" src="/static/images/rear-view-businessman-talking-phone-top-building.jpg" id="businessman">
+		<h1 style="font-size: 400%; padding-left: 0vh ; padding-right: 50%; padding-bottom: 100vh;" id="text2"> Get ready to be <br> 'the one who knocks'</h1>
+	</section>
+	<script type="text/javascript">
+		let serious= document.getElementById("serious");
+		let businessman=document.getElementById("businessman");
+		let text2= document.getElementById("text2");
+
+		window.addEventListener('scroll', function(){
+			var value2 = window.scrollY;
+			serious.style.left= value2*0.85 +'px';
+			businessman.style.left = -value2*0.35 + 'px';
+			text2.style.top = value2*0.3 + 'px';
+
+		})
+	</script>
+	<section class = 'sectionC'>
+
+	<div class="container">
+	<div style = "align-items: center; margin-left: 400px; ">
+		{% with error_messages = get_flashed_messages(with_categories=true, category_filter='error') %}
+			{% if error_messages %}
+				<ul>
+					{% for message in error_messages %}
+						<h4>**Note: {{ message[1] }} !**</h4>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		{% endwith %}
+	</div>
+		<h1 class="my-4">A Premium Job Finding Tool</h1>
+		
+		<!-- Upload form -->
+	<form method="POST" action="{{ url_for('upload') }}" enctype="multipart/form-data">
+			<div class="form-group">
+				<label for="file">Upload a PDF file:</label>
+				<input type="file" class="form-control-file" id="file" name="file">
+			</div>
+			<button type="submit" class="btn btn-primary">Upload</button>
+		</form>
+		
+		<hr>
+		
+		<!-- List of uploaded files -->
+		<h3>Uploaded Files:</h3>
+		<ul>
+			{% for file in files %}
+			<li><b><a style="color: black;" href="{{ url_for('view', filename=file.filename) }}">{{ file.filename }}</a></b></li>
+			{% endfor %}
+		</ul>
+
+		<hr>
+		
+		<!-- Submit form -->
+		<form action="{{ url_for('submit') }}" method="post" enctype="multipart/form-data">
+			<div class="form-data">
+				<label for="name">Your Name:</label>
+				<input type="text" class="form-control" id="name" name="name" required>
+			</div>
+			<div class="form-data">
+				<label for="email">Your Email:</label>
+				<input type="email" class="form-control" id="email" name="email" required>
+			</div>
+			<div class="form-data">
+				<label for="file">Select a file to submit:</label>
+				<select class="form-control" id="file" name="file">
+					{% for file in files %}
+					<option value="{{ file.filename }}">{{ file.filename }}</option>
+					{% endfor %}
+				</select>
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+			{% with success_messages = get_flashed_messages(with_categories=true, category_filter='success') %}
+				{% if success_messages %}
+					<ul>
+						{% for message in success_messages %}
+							<h6 style="color: black;"> Based on your resume these are your following skillsets: {{ message[1] }}</h6>	
+						{% endfor %}
+					</ul>
+				{% endif %}
+			{% endwith %}
+			{% with final_messages = get_flashed_messages(with_categories=true, category_filter='final') %}
+				{% if final_messages %}
+					<ul>
+						{% for message in final_messages %}
+							<h6 style="color: black;"> Based on your skillsets these are the jobs we recommend for you: {{ message[1] }}</h6>
+						{% endfor %}
+					</ul>
+				{% endif %}
+			{% endwith %}
+
+		</form>
+	</div>
+	</section>
+</body>
+</html>

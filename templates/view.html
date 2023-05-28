@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>View PDF</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+		body {
+			background-color: #f1f1f1; /* Set the background color */
+			background-image: url('https://media.istockphoto.com/id/1188324631/photo/stylish-abstract-white-simple-swirl-wavy-background-corporate-business-concept-for.jpg?b=1&s=170667a&w=0&k=20&c=hcXkzNkv27H_0YAHIt-AydFjw9frRCmG2ORtRDdyz9k='); /* Set the background image */
+			background-repeat: no-repeat; /* Do not repeat the background image */
+			background-size: cover; /* Resize the background image to cover the entire container */
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+        <div style="display: flex; align-items: center;">
+            <a href="{{ url_for('index') }}" class="btn btn-primary">Go back</a>
+		    <h1 style= "margin-left: 20px ; margin-right: 760px" class="my-4">View PDF</h1>
+            <form action="{{ url_for('delete', filename = file.filename) }}" method="post" style="display:inline">
+                <input type="hidden" name="filename" value="{{ file.filename }}">
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+        </div>
+		<!-- PDF Viewer -->
+		<div class="embed-responsive embed-responsive-16by9">
+			<iframe class="embed-responsive-item" src="{{ url_for('get_file', filename= file.filename) }}"></iframe>
+		</div>
+	</div>
+
+</body>
+</html>
