@@ -1,0 +1,60 @@
+skills,job
+kubernetes|cloud|jenkins|python|java|docker|kafka|tensorflow,devops
+jenkins|python|java|c|docker|tensorflow,software engineering 
+data science|python|machine learning|kafka|cloud|tensorflow,data analyst
+data science|python|machine learning|deep learning|tensorflow,ML scientist
+cloud|docker|kubernetes|aws|python|tensorflow|kafka,cloud engineer
+javascript|mern|cloud|tensorflow,full stack developer
+kubernetes|cloud|jenkins|python|java|docker,devops
+jenkins|python|java|c|kafka,software engineering 
+data science|python|machine learning,data analyst
+deep learning|python|machine learning,ML scientist
+cloud|docker|kubernetes|aws,cloud engineer
+mern|cloud,full stack developer
+cloud|jenkins|python|java|docker|kafka,devops
+jenkins|java|docker|c,software engineering 
+data science|machine learning|cloud,data analyst
+machine learning|deep learning|data science,ML scientist
+cloud|aws|kafka,cloud engineer
+javascript|mern|cloud,full stack developer
+javascript|mern|tensorflow,ML scientist
+javascript|mern|cloud,cloud engineer
+OOAD|java|jenkins|docker,Architect
+aws|docker|mern|javascript,full stack developer
+aws|docker|mern|javascript,cloud engineer
+python|tensorflow|javascript|machine learning,ML scientist
+kubernetes|cloud|jenkins|kafka,cloud engineer
+machine learning|deep learning|data science|kubernetes|docker,ML scientist
+machine learning|deep learning|data science|kubernetes|docker,cloud engineer
+kubernetes|cloud|jenkins|python|java|docker|kafka|tensorflow,software engineering 
+data science|python|machine learning|kafka|cloud|tensorflow,cloud engineer
+kubernetes|cloud|jenkins|python|java|docker|OOAD,Architect
+kubernetes|cloud|jenkins|python|java|docker|OOAD,cloud engineer
+mern|cloud|tensorflow|deep learning,ML scientist
+mern|cloud|tensorflow|deep learning,cloud engineer
+react|angular|css|html,frontend dev
+react|css|html|tensorflow|jenkins,frontend dev
+react|css|html|tensorflow|jenkins|kafka,devops
+data science|python|machine learning|angular|css,frontend dev
+aws|docker|kubernetes|jenkins|cloud,cloud engineer
+react|tensorflow|deep learning|machine learning,ML scientist
+tensorflow|deep learning|machine learning|kubernetes,ML scientist
+flask|nodejs|fastapi,backend dev
+flask|mern|cloud,full stack developer
+flask|kubernetes|OOAD|kubernetes,Architect
+nodejs|fastapi|docker|jenkins,full stack developer
+Cloud|kubernetes|flask|javascript|kafka,Cloud engineer
+Data science|machine learning|nodejs,backend dev
+java|data science|fastapi|machine learning,ML scientist
+kubernetes|jenkins|machine learning|kafka,devops
+tensorflow|deep learning|fastapi,ML scientist
+data science|mern|javascript|,full stack developer
+react|machine learning|css,frontend dev
+python|jenkins|javascript|machine learning,full stack developer
+kafka|tensorflow|docker,Architect
+aws|jenkins|kubernetes,cloud engineer
+docker|data science|angular|css|python|cloud,cloud engineer
+deep learning|python|machine learning|machine learning|nodejs,ML scientist
+flask|html|css|react,frontend dev
+react|nodejs|fastapi|kubernetes|jenkins,backend dev
+tensorflow|machine learning|angular|deep learning ,ML scientist
