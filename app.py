@@ -107,9 +107,7 @@ def extract_skills(input_text):
  
     return found_skills
 
-def exec(res_path):
-        
-    #text = extract_text_from_docx('resume/Sutejas_resume.docs')
+def exec(res_path):        
     text = extract_text_from_pdf(res_path)
     skills = extract_skills(text)
     st = set()
